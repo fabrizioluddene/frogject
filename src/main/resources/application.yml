@@ -1,0 +1,21 @@
+server:
+  port: 7001
+
+spring:
+  profiles:
+    active: native
+  datasource:
+    url: jdbc:mysql://localhost:3306/frogject
+    username: root
+    password: admin1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  mvc:
+    pathpattern:
+      matching-strategy: ant_path_matcher
+
+api:
+  version: 1.0
